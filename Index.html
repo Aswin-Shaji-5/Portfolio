@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aswin Shaji | Data Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: #1f2937;
+      overflow-x: hidden;
+    }
+
+    /* Smooth fade animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    /* Floating animation */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    header {
+      background: url('https://www.3ds.com/assets/invest/2022-05/data-science-banner-1920x1080.jpeg') center/cover no-repeat;
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+      animation: fadeIn 2s ease;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h2 {
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .skills-list span {
+            background: #e3f2fd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+    .skills-list span:hover {
+            background: #bbdefb;
+            transform: scale(1.05);
+        }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card img {
+      width: 200px;
+      border-radius: 10px;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #111827;
+      color: white;
+      margin-top: 3rem;
+    }
+
+    a { color: #2563eb; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="fade-in">Aswin Shaji</h1>
+  <p class="fade-in">Data Scientist | Machine Learning | Deep Learning</p>
+</header>
+
+<section class="fade-in">
+  <h2>Profile</h2>
+  <p>
+    Highly accurate and tech-savvy aspirant; come up with upgraded skills and knowledge in Data Science , Website
+Development and Finance. Interested to accept challenging opportunities with related experience in a fast-paced IT
+working environment to apply my exceptional multi-tasking and analytical skills in the effective management of
+organizational resources while having the opportunity to develop my own skills.
+  </p>
+</section>
+
+<section class="fade-in">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <img src="lk1646_camd_zmiana-1500x1072.jpg" alt="Housing project">
+    <div>
+      <h3>Housing Price Prediction</h3>
+      <p>Built a multiple regression ML model using Scikit-Learn to predict housing prices based on feature variables.</p>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="Copyright-and-Tweets.png" alt="Sentiment analysis">
+    <div>
+      <h3>Twitter Sentiment Analysis</h3>
+      <p>Used NLTK to classify tweets into positive, negative, and neutral categories with NLP preprocessing techniques.</p>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <h2>Skills</h2>
+  <ul>
+    <li>Python, Data Cleaning, Machine Learning, Deep Learning</li>
+    <li>Jupyter, VS Code, SQL, Tableau, Power BI</li>
+    <li><b>Python Libraries: </b>Numpy, Pandas, Scikit-Learn, TensorFlow, Keras</li>
+    <li>Analytical Thinking, Presentation, Communication</li>
+  </ul>
+</section>
+
+<section class="fade-in">
+  <h2>Contact</h2>
+  <p><strong>Email:</strong> <a href="mailto:aswinshaji8246@gmail.com">aswinshaji8246@gmail.com</a></p>
+  <p><strong>Phone:</strong> +91 9495752946</p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/aswin-shaji5" target="_blank">linkedin.com/in/aswin-shaji5</a></p>
+</section>
+
+<footer>
+  © 2025 Aswin Shaji | Portfolio Website
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abin Franklin - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+        header {
+            background: url("https://cdn.pixabay.com/photo/2023/05/19/18/00/ai-generated-8005084_1280.png") center/cover no-repeat;
+            color: rgb(255, 255, 255);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+        header h3 {
+            margin-top: 10px;
+            font-weight: normal;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: #0d1b2a;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        ul { padding-left: 20px; }
+        a { color: #00509e; text-decoration: none; }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0d1b2a;
+            color: white;
+            margin-top: 40px;
+        }
+        /* Enhanced styling */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        h2 {
+            position: relative;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background: #0d1b2a;
+            border-radius: 5px;
+        }
+        .skills-list span {
+            background: #e3f2fd;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+        .skills-list span:hover {
+            background: #bbdefb;
+            transform: scale(1.05);
+        }
+        footer {
+            letter-spacing: 1px;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13,27,42,0.9);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #90caf9;
+        }
+    /* Extra Images, Animations & Modern Styles */
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade {
+            animation: fadeIn 1.2s ease forwards;
+        }
+
+        /* Smooth hover zoom for images */
+        .hero-img, .section-img {
+            border-radius: 12px;
+            width: 100%;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .hero-img:hover, .section-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        }
+
+        /* Project Cards Style */
+        .project-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Section Title Animation */
+        h2 {
+            position: relative;
+            animation: fadeIn 1.4s ease;
+        }
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100px;
+            height: 4px;
+            background: #0d1b2a;
+            border-radius: 10px;
+            animation: growLine 1.5s ease;
+        }
+
+        @keyframes growLine {
+            from { width: 0; }
+            to { width: 100px; }
+        }
+
+        /* Skills Enhanced */
+        .skills-list span {
+            background: linear-gradient(to bottom right, #e3f2fd, #bbdefb);
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .skills-list span:hover {
+            transform: scale(1.08) rotate(1deg);
+            background: linear-gradient(to bottom right, #bbdefb, #90caf9);
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+</style>
+</head>
+<body>
+
+<header class="fade" >
+
+    
+    
+    
+    <h1>Abin Franklin</h1>
+    <h3>Data Scientist</h3>
+    <p>
+        <a href="mailto:abinfranklin007@gmail.com" style="color:#fff;">abinfranklin007@gmail.com</a> |
+        <a href="tel:+919567624244" style="color:#fff;">+91 9567624244</a> |
+        Trivandrum, Kerala
+    </p>
+    <p>
+        <a href="https://github.com/Abin-franklin" target="_blank" style="color:#fff;">GitHub</a> |
+        <a href="https://www.linkedin.com/in/abin-franklin-255809325/" target="_blank" style="color:#fff;">LinkedIn</a>
+    </p>
+    
+    
+
+    
+</header>
+
+<section class="section fade" id="profile">
+    <img src="https://pythoninai.club/wp-content/uploads/2024/06/python-for-Ai-and-ml.png" class="section-img floating" />
+    <h2>Profile</h2>
+    <div class="project-card">
+        <p>
+            Analytical Data Scientist skilled in machine learning, data analysis, and predictive modeling.
+            Experienced in turning complex data into actionable insights and building end-to-end ML solutions.
+            Passionate about solving real-world business problems through data.
+        </p>
+    </div>
+</section>
+
+<section class="section" id="experience">
+    <h2>Work Experience</h2>
+    <div class="card">
+        <h3>Data Science Intern – Edure (Aug 2025 - Present)</h3>
+        <ul>
+            <li>Collected, cleaned, and analyzed datasets using Python, Pandas, and NumPy.</li>
+            <li>Built ML models: regression, classification, and clustering.</li>
+            <li>Performed data visualization using Matplotlib & Seaborn.</li>
+            <li>Worked on preprocessing, feature engineering, and optimizing models.</li>
+            <li>Collaborated on mini-projects following industry workflows.</li>
+            <li>Hands-on experience with SQL and Jupyter Notebook.</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section fade" id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>Customer Behaviour Classification</h3>
+        <p>Built ML model using Scikit-Learn to predict customer buying decisions.</p>
+    </div>
+
+    <div class="card">
+        <h3>Employee Attrition Prediction</h3>
+        <p>Developed classification model to predict employee attrition trends.</p>
+    </div>
+
+    <div class="card">
+        <h3>German Credit Risk Analysis</h3>
+        <p>Designed predictive model to classify German credit risk categories.</p>
+    </div>
+</section>
+
+<section class="section" id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <ul>
+            <li>PG in Data Science & AI – Edure (2024–Present)</li>
+            <li>MA Economics – Fatima Mata National College (2022–2024)</li>
+            <li>BA Economics – Fatima Mata National College (2018–2021)</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section" id="skills">
+    <h2>Professional Skills</h2>
+    <div class="card skills-list">
+        <span>Analytical Thinking</span>
+        <span>Problem Solving</span>
+        <span>Programming Debugging</span>
+        <span>Time Management</span>
+        <span>Teamwork & Adaptability</span>
+        <span>Economical/Statistical Analysis</span>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="card skills-list">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Excel</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>Matplotlib</span>
+        <span>Seaborn</span>
+        <span>Machine Learning</span>
+        <span>Deep Learning</span>
+        <span>NLP</span>
+        <span>Image Processing</span>
+        <span>Pandas</span>
+        <span>NumPy</span>
+        <span>Jupyter Notebook</span>
+        <span>VS Code</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Bootstrap</span>
+    </div>
+</section>
+
+<footer>
+    © 2025 Abin Franklin | Portfolio Website
+</footer>
+
+</body>
+</html>
